@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music Player</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <header class="dark rounded">
+        <img
+          class="song-img"
+          src="./img/total.jpg"
+          alt="song img"
+          data-song-img=""
+        />
+        <div class="flex navigation-arrows-and-title">
+          <button data-left-arrow>
+            <img
+              src="./img/right-arrow.svg"
+              alt="left arrow"
+              class="one_houndred_ninety-deg"
+            />
+          </button>
+          <h1 class="h3" data-song-title="">True Faith</h1>
+          <button data-right-arrow="">
+            <img src="./img/right-arrow.svg" alt="right arrow" />
+          </button>
+        </div>
+        <div class="flex grouped-header-buttons">
+          <button class="btn-purple" data-lyrics-btn="">Lyrics</button>
+          <button data-play-btn="">
+            <img src="./img/play-button-arrowhead.svg" alt="play button" />
+          </button>
+          <button class="btn-purple" data-details-btn="">Details</button>
+        </div>
+        <div class="time-elements flex xsmall-text">
+          <p data-current-time="">0:00</p>
+          <p data-full-time="">0:00</p>
+        </div>
+        <canvas class="progress-bar" data-progress-bar=""></canvas>
+      </header>
+      <div class="lyrics-container dark rounded" data-song-text="">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente alias
+        quia dolores, sint assumenda quibusdam similique tenetur accusantium
+        dolor cumque autem vero. Doloribus odio quidem consequuntur
+        necessitatibus impedit, non iusto. Lorem ipsum dolor sit amet
+        consectetur, adipisicing elit. Sapiente alias quia dolores, sint Lorem
+        ipsum dolor sit amet consectetur, adipisicing elit. Sapiente alias quia
+        dolores, sint assumenda quibusdam similique tenetur accusantium dolor
+        cumque autem vero. Doloribus odio quidem consequuntur necessitatibus
+        impedit, non iusto. Lorem ipsum dolor sit amet consectetur, adipisicing
+        elit. Sapiente alias quia dolores, sint Lorem ipsum dolor sit amet
+        consectetur, adipisicing elit. Sapiente alias quia dolores, sint
+        assumenda quibusdam similique tenetur accusantium dolor cumque autem
+        vero. Doloribus odio quidem consequuntur necessitatibus impedit, non
+        iusto. Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+        Sapiente alias quia dolores, sint Lorem ipsum dolor sit amet
+        consectetur, adipisicing elit. Sapiente alias quia dolores, sint
+        assumenda quibusdam similique tenetur accusantium dolor cumque autem
+        vero. Doloribus odio quidem consequuntur necessitatibus impedit, non
+        iusto. Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+        Sapiente alias quia dolores, sint Lorem ipsum dolor sit amet
+        consectetur, adipisicing elit. Sapiente alia
+      </div>
+      <button class="music-library-btn dark rounded" data-library-btn="">
+        <img src="/img/sound.svg" alt="music library" />
+      </button>
+      <div class="list-of-songs" data-list-of-songs="">
+        <button class="list-of-songs-return" data-return-btn="">
+          <img src="./img/arrow_back_white_36dp.svg" alt="arrow back" />
+        </button>
+      </div>
+    </div>
+  </body>
+</html>

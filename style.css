@@ -1,0 +1,259 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --dark-gray: #2f2f2f;
+  --light-gray: #3d3d3d;
+  --white: #fff;
+  --purple: #9f72ff;
+}
+
+body {
+  background-color: var(--light-gray);
+  color: var(--white);
+  font-size: 1.2rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  width: 30px;
+}
+
+header {
+  position: relative;
+  padding: 5.5rem 0 0 0;
+}
+
+button {
+  background: none;
+  border: none;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+button:hover,
+button:focus {
+  opacity: 0.75;
+}
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.one_houndred_ninety-deg {
+  transform: rotate(180deg);
+}
+
+.h3 {
+  font-size: 1.5rem;
+}
+
+.medium-text {
+  font-size: clamp(1.2rem, 4vw, 1.3rem);
+}
+
+.small-text {
+  font-size: clamp(0.95rem, 3vw, 1.2rem);
+}
+
+.xsmall-text {
+  font-size: clamp(0.85rem, 3vw, 1rem);
+}
+
+.btn-purple {
+  color: var(--white);
+  background-color: var(--purple);
+  border-radius: 0.2rem;
+  padding: 0.5rem 0;
+  min-width: 4rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.dark {
+  background-color: var(--dark-gray);
+}
+
+.rounded {
+  border-radius: 0.5rem;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  padding: 5rem 0.8rem 2rem 0.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 600px;
+  }
+}
+
+.song-img {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, -50%);
+  width: 6.5rem;
+  height: 6.5rem;
+  border-radius: 100rem;
+  animation: rotateCoverImg 100s linear 0.5s infinite;
+  animation-play-state: paused;
+}
+
+.navigation-arrows-and-title {
+  justify-content: space-evenly;
+  margin-top: -1.2rem;
+}
+
+.grouped-header-buttons {
+  padding: 1.75rem 0 1.5rem 0;
+  justify-content: space-around;
+}
+
+.time-elements {
+  justify-content: space-between;
+  padding: 0rem 0.5rem 1.2rem 0.5rem;
+}
+
+.progress-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.6rem;
+  background-color: var(--white);
+  border-radius: 0 0 0.5rem 0.5rem;
+  cursor: pointer;
+}
+
+.lyrics-container {
+  height: 50vh;
+  padding: 1.1rem;
+  overflow-y: scroll;
+  line-height: 1.8;
+}
+
+.lyrics-container p {
+  padding: 1rem 0;
+}
+
+.indicators {
+  color: var(--purple);
+  font-size: 1.32rem;
+}
+
+.music-library-btn {
+  padding: 0.35rem;
+  margin: 0 auto;
+}
+
+.music-library-btn img {
+  width: 50px;
+  height: 50px;
+}
+
+.list-of-songs {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100%;
+  background-color: var(--dark-gray);
+  display: none;
+  overflow-y: scroll;
+}
+
+.list-of-songs.unhide {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .list-of-songs {
+    left: 0.8rem;
+    width: calc(100% - 1.6rem);
+    border-radius: 0 0 0.5rem 0.5rem;
+  }
+}
+
+.list-of-songs-return {
+  margin: 0.75rem 0 0 0.75rem;
+  padding: 0.5rem;
+}
+
+.list-of-songs-return img {
+  width: 35px;
+}
+
+.song-library-div {
+  width: 90%;
+  margin: 2rem auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  align-items: center;
+  gap: 1rem;
+  background: var(--light-gray);
+}
+
+.song-library-column {
+  padding: 0.4rem 0;
+}
+
+.song-library-column *:first-child {
+  margin-bottom: clamp(0.2rem, 1vw, 0.5rem);
+}
+
+.song-library-column *:last-child {
+  margin-top: clamp(0.2rem, 1vw, 0.35rem);
+}
+
+.song-library-img {
+  width: 100%;
+  max-width: 8rem;
+  aspect-ratio: 1 / 1;
+  align-self: start;
+  border-radius: 0.5rem 0 0 0.5rem;
+}
+
+.song-library-div button {
+  justify-self: center;
+  padding: 1rem;
+}
+
+.song-library-div button img {
+  max-width: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .song-library-div button img {
+    max-width: none;
+    min-width: 2rem;
+  }
+}
